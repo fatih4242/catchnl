@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.HomeFragment">
+
+    <include
+        android:id="@+id/actionbar"
+        layout="@layout/actionbar_layout"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/actionbar">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/licence_plate">
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/licencePlate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingStart="60dp"
+                    android:textSize="40sp"
+                    android:maxLength="8"
+                    android:background="@drawable/background_none"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textColor="@color/black"
+                     />
+
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/monthLeftText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="je kan deze maand nog 2 auto's opgeven"
+                android:textAlignment="center"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/black"
+                android:layout_marginBottom="20dp"/>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/plaatsTXT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Plaats"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/black"
+                android:layout_below="@+id/licencePlate"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/placeEditText"
+                android:inputType="textPersonName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_background_modifier"
+                android:hint="Amsterdam"
+                android:fontFamily="@font/poppins_semibold"
+                android:textSize="16sp"
+                android:padding="10dp"
+                android:layout_below="@+id/plaatsTXT"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/place_icon"
+                android:shadowRadius="1" />
+
+
+
+
+
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/dateText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Datum (YYYY-MM-DD)"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/black"
+
+                android:layout_below="@+id/licencePlate"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/dateEditText"
+                android:inputType="date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_background_modifier"
+                android:hint="YYYY-MM-DD"
+                android:fontFamily="@font/poppins_semibold"
+                android:textSize="16sp"
+                android:padding="10dp"
+                android:layout_below="@+id/plaatsTXT"
+                android:drawablePadding="10dp"
+                android:shadowRadius="1" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/incidentTXTForInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Incident"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/black"
+                android:layout_below="@+id/placeEditText"/>
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/incidentSPINNER"
+                android:background="@drawable/input_background_modifier"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+
+                android:layout_below="@+id/incidentTXTForInfo"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:visibility="gone"
+                android:id="@+id/incidentMessage"
+                android:layout_marginTop="10dp"
+                android:inputType="text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_background_modifier"
+                android:hint="anders"
+                android:fontFamily="@font/poppins_semibold"
+                android:textSize="16sp"
+                android:padding="10dp"
+                android:layout_below="@+id/incidentSPINNER"
+                android:shadowRadius="1" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/uploadBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Verstuur"
+                android:layout_below="@id/incidentMessage"
+                android:background="@drawable/button_modifier"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:layout_marginTop="30dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+</RelativeLayout>
