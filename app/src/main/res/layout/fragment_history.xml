@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.HistoryFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <include
+        android:id="@+id/actionbar"
+        layout="@layout/actionbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"/>
+
+    <LinearLayout
+        android:id="@+id/changeOption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/actionbar"
+        android:paddingHorizontal="20dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:id="@+id/sendLayout"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:background="@drawable/history_left_active_button_background">
+            <TextView
+                android:id="@+id/sendTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Verstuurd"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/white"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/receivedLayout"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:background="@drawable/history_right_hide_button_background">
+            <TextView
+                android:id="@+id/receivedTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/primary_red"
+                android:text="Ontvangen"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/titleTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/changeOption"
+        android:text="JOUW GEREGISTEERDE MELDINGEN"
+        android:fontFamily="@font/poppins_semibold"
+        android:textSize="20sp"
+        android:textColor="@color/secondry_black"
+        android:layout_marginTop="20dp"
+        android:gravity="center"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titleTxt"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        tools:listitem="@layout/history_recyclerview_layout"/>
+
+
+
+</RelativeLayout>
