@@ -39,9 +39,7 @@ struct TopBarModifier: ViewModifier {
                             } else {
                                 viewModel.state = .info
                             }
-                             
-                            print("isFromMain \(viewModel.goInfoFromMain)")
-                        }
+                       }
                 }
             }
             .toolbarBackground(.white, for: ToolbarPlacement.navigationBar)
