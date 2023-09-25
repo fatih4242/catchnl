@@ -16,7 +16,7 @@ import retrofit2.http.Query;
 
 public interface API {
 
-    String BASE_URL = "https://catchnl.tokersoftware.nl";
+    String BASE_URL = "SERVER_URL";
 
     @FormUrlEncoded
     @POST("/api/register.php")
